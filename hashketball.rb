@@ -193,6 +193,33 @@ elsif team == "Charlotte Hornets"
   end
   
   
+  def get_lagest_size
+    lagest_size = 0
+    game_hash.each do |location, team_data|
+      team_data.each do |attribute, data|
+        if data.class == Array
+        data.each do |data_item|
+        if data_item.class == Hash
+            data_item.each do |iner_key, iner_value|
+                if iner_key == :shoe
+                   if iner_value > lagest_size
+                    lagest_size = iner_value 
+                    end
+                    end
+                    end
+                    end
+                    end
+                    end
+                    end
+    end
+    return lagest_size
+end
+  
+  
+  
+  
+  
+  
     def big_shoe_rebounds
     size = get_lagest_size
     count = 0
