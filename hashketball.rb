@@ -191,4 +191,18 @@ elsif team == "Charlotte Hornets"
     count += 1
     end
   end
+  
+  
+    def big_shoe_rebounds
+    size = get_lagest_size
+    count = 0
+    while game_hash[:home][:players].length > count
+    if game_hash[:home][:players][count][:shoe] == size
+        return game_hash[:home][:players][count][:rebounds]
+    elsif game_hash[:away][:players][count][:shoe] == size
+        return game_hash[:away][:players][count][:rebounds]
+        end
+    count += 1
+    end
+  end
 
